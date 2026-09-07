@@ -1,0 +1,299 @@
+/* ==========================================================================
+   MOON ESSENCE - ESTILO LUXURY & HIGH FASHION
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-principal: #fafafa;
+    --bg-card: #ffffff;
+    --texto-primario: #111111;
+    --texto-secundario: #666666;
+    --acento-oro: #c5a059;
+    --acento-oro-hover: #a37f3e;
+    --borde-elegante: #e5e5e5;
+    --fuente-titulo: 'Cinzel', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-primario);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--borde-elegante);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--texto-primario);
+}
+
+.logo span {
+    color: var(--acento-oro);
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--texto-primario);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--acento-oro);
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+.seccion-titulo {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.seccion-titulo h2, .seccion-titulo h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.seccion-titulo p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* --- REJILLA DE PRODUCTOS --- */
+.mostrador-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.producto-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--borde-elegante);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.producto-img-simulador {
+    width: 100%;
+    height: 380px !important;
+    background-color: #f0f0f0;
+}
+
+.producto-img-simulador img {
+    transition: transform 0.6s ease;
+}
+
+.producto-card:hover .producto-img-simulador img {
+    transform: scale(1.04);
+}
+
+.producto-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.producto-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.producto-precio {
+    font-size: 1rem;
+    color: var(--acento-oro);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+/* --- BOTONES --- */
+.btn-add-carrito, .btn-exito {
+    width: 100%;
+    background-color: var(--texto-primario);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-carrito:hover {
+    background-color: var(--acento-oro);
+}
+
+.btn-exito {
+    background-color: var(--acento-oro) !important;
+}
+
+.btn-exito:hover {
+    background-color: var(--acento-oro-hover) !important;
+}
+
+/* --- FORMULARIOS Y PANELES --- */
+.panel-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--borde-elegante);
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    color: var(--texto-secundario);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--borde-elegante);
+    background-color: #fafafa;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.9rem;
+    color: var(--texto-primario);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--texto-primario);
+    background-color: #ffffff;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    border-top: 1px solid var(--borde-elegante);
+    background-color: #ffffff;
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+}
+/* --- ESTILOS DE LA SECCIÓN DE FILTROS --- */
+.filtros-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 2rem 0 3.5rem 0;
+    width: 100%;
+}
+
+.grupo-filtros {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones principales (Todos, Mujer, Hombre) */
+button.btn-filtro {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    font-family: var(--fuente-titulo), 'Cinzel', serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    color: var(--texto-secundario);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+button.btn-filtro:hover, 
+button.btn-filtro.active {
+    color: var(--texto-primario) !important;
+    border-bottom-color: var(--acento-oro) !important;
+}
+
+/* Botones secundarios (Categorías) */
+button.btn-subfiltro {
+    background: #ffffff !important;
+    border: 1px solid var(--borde-elegante) !important;
+    font-family: var(--fuente-cuerpo), 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    color: var(--texto-primario);
+    transition: all 0.3s ease;
+    outline: none;
+    border-radius: 0px !important;
+}
+
+button.btn-subfiltro:hover, 
+button.btn-subfiltro.active {
+    background: var(--texto-primario) !important;
+    color: #ffffff !important;
+    border-color: var(--texto-primario) !important;
+}
