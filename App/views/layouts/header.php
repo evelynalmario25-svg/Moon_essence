@@ -7,27 +7,36 @@ if (session_status() === PHP_SESSION_NONE) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <a href="/Moon_essence/public/index.php?action=admin-dashboard">Panel Admin</a>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Essence</title>
     <link rel="stylesheet" href="/Moon_essence/public/css/style.css">
 </head>
 <body>
     <header>
-        <div class="logo">Moon<span>Essence</span></div>
-        <nav>
-            <a href="/Moon_essence/public/index.php" class="active">Mostrador</a>
-            <a href="/Moon_essence/public/index.php?action=panel-emprendedor">Mi Emprendimiento</a>
-            <a href="#carrito-checkout">Carrito (2)</a>
+    <div class="logo">
+        <a href="/Moon_essence/public/index.php" style="text-decoration: none; color: inherit;">
+            MOON<span>ESSENCE</span>
+        </a>
+    </div>
 
-            <?php if (isset($_SESSION['usuario_id'])): ?>
-                <span style="color: var(--color-neon-claro); margin-left: 20px;">
-                    Hola, <?= htmlspecialchars($_SESSION['nombre']) ?>
-                </span>
-                <a href="/Moon_essence/public/index.php?action=logout" style="color: #ff4d4d;">Salir</a>
-            <?php else: ?>
-                <a href="/Moon_essence/public/index.php?action=login">Iniciar Sesión</a>
-                <a href="/Moon_essence/public/index.php?action=register" class="btn-exito" style="padding: 6px 12px; border-radius: 4px; text-decoration: none;">Registro</a>
-            <?php endif; ?>
-        </nav>
-    </header>
+    <nav>
+        <a href="/Moon_essence/public/index.php" class="<?= ($_GET['action'] ?? '') == 'index' ? 'active' : '' ?>">Mostrador</a>
+        
+        <!-- Enlace al Panel Admin alineado con el diseño elegante -->
+        <a href="/Moon_essence/public/index.php?action=admin-dashboard" class="<?= ($_GET['action'] ?? '') == 'admin-dashboard' ? 'active' : '' ?>">
+            Panel Admin
+        </a>
+
+        <a href="/Moon_essence/public/index.php?action=panel-emprendedor">Mi Emprendimiento</a>
+        <a href="#">Carrito (2)</a>
+
+        <?php if (isset($_SESSION['usuario_id'])): ?>
+            <a href="/Moon_essence/public/index.php?action=logout">Cerrar Sesión</a>
+        <?php else: ?>
+            <a href="/Moon_essence/public/index.php?action=login">Iniciar Sesión</a>
+            <a href="/Moon_essence/public/index.php?action=register" class="btn-header-gold">Registro</a>
+        <?php endif; ?>
+    </nav>
+</header>
     <div class="container">

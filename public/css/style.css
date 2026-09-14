@@ -297,3 +297,158 @@ button.btn-subfiltro.active {
     color: #ffffff !important;
     border-color: var(--texto-primario) !important;
 }
+
+//* ==========================================================================
+   ESTILOS DE NAVEGACIÓN Y PANEL ADMIN
+   ========================================================================== */
+
+/* Botón especial de registro en el header */
+.btn-header-gold {
+    background-color: var(--acento-oro, #c5a059);
+    color: #ffffff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-header-gold:hover {
+    background-color: var(--acento-oro-hover, #a37f3e) !important;
+}
+
+/* --- DASHBOARD ADMIN --- */
+.admin-dashboard-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--borde-elegante, #e5e5e5);
+    padding-bottom: 1rem;
+}
+
+.admin-header h2 {
+    font-family: var(--fuente-titulo, 'Cinzel', serif);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.badge-role {
+    background-color: var(--texto-primario, #111111);
+    color: #ffffff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+}
+
+/* Contenedor Grid de Métricas */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.kpi-card {
+    border: 1px solid var(--borde-elegante, #e5e5e5);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-body {
+    padding: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.kpi-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.kpi-number {
+    font-family: var(--fuente-titulo, 'Cinzel', serif);
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.kpi-title-text {
+    font-family: var(--fuente-titulo, 'Cinzel', serif);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.kpi-footer {
+    display: block;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    transition background 0.3s ease, color 0.3s ease;
+}
+
+/* Tarjeta Azul */
+.card-blue {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+.card-blue .kpi-label { color: #93c5fd; }
+.card-blue .kpi-footer {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+.card-blue .kpi-footer:hover { background-color: #1d4ed8; }
+
+/* Tarjeta Verde */
+.card-green {
+    background-color: #064e3b;
+    color: #ffffff;
+}
+
+.card-green .kpi-label { color: #6ee7b7; }
+.card-green .kpi-footer {
+    background-color: #059669;
+    color: #ffffff;
+}
+.card-green .kpi-footer:hover { background-color: #047857; }
+
+/* Tarjeta Blanca / Rosada */
+.card-white {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.card-white .kpi-label { color: #666666; }
+.icon-rose { color: #e11d48; }
+
+.footer-rose {
+    background-color: #fecdd3;
+    color: #881337;
+}
+
+.footer-rose:hover { background-color: #fda4af; }
