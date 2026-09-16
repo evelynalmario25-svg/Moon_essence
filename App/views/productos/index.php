@@ -1,5 +1,11 @@
 <?php include __DIR__ . '/../layouts/header.php'; ?>
 
+<!-- kjhkjh}
+jkhkjh
+kjhkj
+kjhkj -->
+
+
 <div class="seccion-titulo">
     <h2>Mostrador Comunitario</h2>
     <p>Descubre prendas exclusivas de diseñadores</p>
