@@ -2,7 +2,7 @@
 
 <div class="seccion-titulo">
     <h2>Mostrador Comunitario</h2>
-    <p>Descubre prendas exclusivas de diseñadores locales supervisadas para tu seguridad.</p>
+    <p>Descubre prendas exclusivas de diseñadores</p>
 </div>
 
 <!-- SECCIÓN DE FILTROS POR GÉNERO Y CATEGORÍA -->
@@ -38,7 +38,7 @@
                 $categoria = 'blusa';
                 break;
             case 2:
-                $nombrePersonalizado = 'Chaqueta Lunar';
+                $nombrePersonalizado = 'Chaqueta';
                 $imagenUrl = '/Moon_essence/public/img/Chaqueta.jpg'; 
                 $precioPersonalizado = 120000;
                 $genero = 'hombre';

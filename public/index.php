@@ -3,44 +3,46 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Carga de controladores
+// Cargar controladores
 require_once __DIR__ . '/../app/controllers/ProductoController.php';
-require_once __DIR__ . '/../app/controllers/AuthController.php';
 require_once __DIR__ . '/../app/controllers/AdminController.php';
 
-// Obtener la acción solicitada en la URL
-$action = $_GET['action'] ?? 'index';
-
-// Instanciar los controladores
-$authController = new AuthController();
 $productoController = new ProductoController();
 $adminController = new AdminController();
 
-// Enrutador principal
+$action = $_GET['action'] ?? 'index';
+
 switch ($action) {
+    case 'index':
+        $productoController->index();
+        break;
+
     case 'admin-dashboard':
         $adminController->dashboard();
         break;
 
-    case 'login':
-        $authController->showLogin();
+    case 'reportes':
+        $adminController->reportes();
         break;
 
-    case 'do-login':
-        $authController->login();
+    case 'panel-emprendedor':
+        $productoController->panelEmprendedor();
+        break;
+
+    case 'login':
+        // Vista o acción de login
+        require_once __DIR__ . '/../app/views/auth/login.php';
         break;
 
     case 'register':
-        $authController->showRegister();
-        break;
-
-    case 'do-register':
-        $authController->register();
+        // Vista o acción de registro
+        require_once __DIR__ . '/../app/views/auth/register.php';
         break;
 
     case 'logout':
-        $authController->logout();
-        break;
+        session_destroy();
+        header('Location: /Moon_essence/public/index.php');
+        exit;
 
     default:
         $productoController->index();

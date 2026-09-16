@@ -408,7 +408,6 @@ button.btn-subfiltro.active {
     letter-spacing: 2px;
     text-decoration: none;
     font-weight: 600;
-    transition background 0.3s ease, color 0.3s ease;
 }
 
 /* Tarjeta Azul */
@@ -424,18 +423,18 @@ button.btn-subfiltro.active {
 }
 .card-blue .kpi-footer:hover { background-color: #1d4ed8; }
 
-/* Tarjeta Verde */
+/* Tarjeta oro */
 .card-green {
-    background-color: #064e3b;
+    background-color: #c5a059;
     color: #ffffff;
 }
 
-.card-green .kpi-label { color: #6ee7b7; }
+.card-green .kpi-label { color: #a37f3e; }
 .card-green .kpi-footer {
-    background-color: #059669;
+    background-color: #a37f3e;
     color: #ffffff;
 }
-.card-green .kpi-footer:hover { background-color: #047857; }
+.card-green .kpi-footer:hover { background-color: #c5a059; }
 
 /* Tarjeta Blanca / Rosada */
 .card-white {

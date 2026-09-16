@@ -1,19 +1,17 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <a href="/Moon_essence/public/index.php?action=admin-dashboard">Panel Admin</a>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon Essence</title>
+    <title>MOON ESSENCE - High Fashion</title>
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="/Moon_essence/public/css/style.css">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+
+<header>
     <div class="logo">
         <a href="/Moon_essence/public/index.php" style="text-decoration: none; color: inherit;">
             MOON<span>ESSENCE</span>
@@ -23,7 +21,6 @@ if (session_status() === PHP_SESSION_NONE) {
     <nav>
         <a href="/Moon_essence/public/index.php" class="<?= ($_GET['action'] ?? '') == 'index' ? 'active' : '' ?>">Mostrador</a>
         
-        <!-- Enlace al Panel Admin alineado con el diseño elegante -->
         <a href="/Moon_essence/public/index.php?action=admin-dashboard" class="<?= ($_GET['action'] ?? '') == 'admin-dashboard' ? 'active' : '' ?>">
             Panel Admin
         </a>
@@ -39,4 +36,3 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php endif; ?>
     </nav>
 </header>
-    <div class="container">
